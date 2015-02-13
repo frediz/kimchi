@@ -1,12 +1,5 @@
 kimchi (1.4.0-1) UNRELEASED; urgency=medium
 
-  * New upstream version 1.4.0
-  * Minor fixes to packaging
+  * Initial release (Closes: #772823)
 
  -- Frédéric Bonnard <frediz@linux.vnet.ibm.com>  Fri, 16 Jan 2015 14:53:12 +0000
-
-kimchi (1.3.0-1) UNRELEASED; urgency=medium
-
-  * Initial release. (Closes: #772823)
-
- -- Frédéric Bonnard <frediz@linux.vnet.ibm.com>  Wed, 05 Nov 2014 13:40:29 +0000
