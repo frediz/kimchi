@@ -1,0 +1,54 @@
+Source: kimchi
+Section: misc
+Priority: optional
+Maintainer: Frederic Bonnard <frediz@linux.vnet.ibm.com>
+Standards-Version: 3.9.6
+Build-Depends: debhelper (>= 9), dh-autoreconf, dh-systemd, python, xsltproc, python-libxml2, python-cherrypy3, python-ipaddr, python-psutil, python-requests, python-libvirt, python-parted, python-lxml, python-cheetah, python-guestfs, python-pil, python-ethtool, python-pam, python-jsonschema, python-m2crypto
+Homepage: https://github.com/kimchi-project/kimchi
+
+Package: kimchi
+Architecture: any
+Depends: ${misc:Depends},
+  ${python:Depends},
+  python-libxml2,
+  python-cherrypy3,
+  python-ipaddr,
+  python-psutil,
+  python-requests,
+  python-libvirt,
+  python-parted,
+  python-lxml,
+  python-cheetah,
+  python-guestfs,
+  python-pil,
+  python-ethtool,
+  python-pam,
+  python-jsonschema,
+  python-m2crypto,
+  python-imaging,
+  python-ldap,
+  websockify,
+  libjs-jquery,
+  libjs-jquery-ui,
+  libjs-jquery-ui-theme-base,
+  libvirt-bin,
+  qemu-system-arm [armel armhf],
+  qemu-system-mips [mips mipsel],
+  qemu-system-misc [s390x],
+  qemu-system-ppc [powerpc ppc64 ppc64el],
+  qemu-system-sparc [sparc],
+  qemu-system-x86 [i386 amd64],
+  nginx,
+  sudo,
+  gettext,
+  nfs-common,
+  sosreport,
+  open-iscsi,
+  libguestfs-tools
+Suggests: firewalld
+Description: HTML5 based management tool for KVM
+ Kimchi is designed to make it as easy as possible to get started with KVM and
+ create your first guest.
+ Kimchi runs as a daemon on the hypervisor host. It manages KVM guests through
+ libvirt. The management interface is accessed over the web using a browser that
+ supports HTML5.

@@ -1,0 +1,15 @@
+Give kimchi a specific pam service
+
+Index: kimchi-1.4.0/src/kimchi/auth.py
+===================================================================
+--- kimchi-1.4.0.orig/src/kimchi/auth.py	2014-12-17 15:50:31.000000000 +0000
++++ kimchi-1.4.0/src/kimchi/auth.py	2015-02-06 16:16:07.360653087 +0000
+@@ -143,7 +143,7 @@
+         return self.user
+ 
+     @staticmethod
+-    def authenticate(username, password, service="passwd"):
++    def authenticate(username, password, service="kimchi"):
+         '''Returns True if authenticate is OK via PAM.'''
+         def _pam_conv(auth, query_list, userData=None):
+             resp = []

@@ -1,0 +1,100 @@
+.TH KIMCHI 1 "February 05, 2015" "Version 1.4.0" "Kimchi Manual"
+.SH NAME Kimchi \- HTML5 based management tool for KVM
+.SH SYNOPSIS
+.B kimchid
+[\fB-h\fP|\fB--help\fP] [\fB--host\fP \fIhost\fP] [\fB--port\fP \fIport\fP] 
+[\fB--ssl-port\fP \fIssl_port\fP] [\fB--cherrypy_port\fP \fIcherrypy_port\fP] 
+[\fB--log-level\fP \fIlog_level\fP] [\fB--access-log\fP \fIaccess_log\fP]
+[\fB--error-log\fP \fIerror_log\fP] [\fB--environment\fP \fIenvironment\fP]
+[\fB--federation\fP \fIfederation\fP] [\fB--test\fP]
+.SH DESCRIPTION
+\fBKimchi\fP is an HTML5 based management tool for KVM. It is designed to make
+it as easy as possible to get started with KVM and create your first guest.
+\fBkimchid\fP launches the daemon on the hypervisor host which manages KVM guests through
+libvirt. The management interface is accessed over the web using a browser that
+supports HTML5.
+.SH OPTIONS
+The following options are supported:
+.TP
+\fB-h\fP , \fB--help\fP 
+Show the help message and exit
+.TP
+\fB--host\fP
+Specify the hostname to listen on
+.TP
+\fB--port\fP
+Specify the port to listen on (default \fI8000\fP)
+.TP
+\fB--ssl-port\fP
+Specify the port to enable SSL (default \fI8001\fP)
+.TP
+\fB--cherrypy_port\fP
+Specify the Cherrypy server port (default \fI8010\fP)
+.TP
+\fB--log-level\fP
+Specify the log level
+.TP
+\fB--access-log\fP
+Specify the access log file
+.TP
+\fB--environment\fP
+Specify the running environment of kimchi server
+.TP
+\fB--federation\fP
+Register and discover Kimchi peers in the same network using openSLP. Check
+README-federation for more details.
+.TP
+\fB--test\fP
+Run server in mock model
+.SH LICENCE
+.br
+Kimchi is distributed pursuant to the terms of two different licenses.
+The user interface (located in ui/ in this distribution) is governed by
+the Apache License version 2.0.
+
+Except the code under ui/spice-html5 which is imported from spice-html5 project
+(http://cgit.freedesktop.org/spice/spice-html5) and under ui/libs which is
+imported from JQuery UI (http://jqueryui.com)
+
+The rest of this distribution is governed by the GNU Lesser General Public
+License version 3.
+
+See COPYING.LGPL and COPYING.ASL2.
+.SH BUGS
+Current bugs can be found here : https://github.com/kimchi-project/kimchi/issues
+.br
+If you find any, please open an issue : https://github.com/kimchi-project/kimchi/issues/new
+.SH AUTHOR
+\fBAdam King\fP <rak@linux.vnet.ibm.com>,
+\fBAdam Litke\fP <agl@linux.vnet.ibm.com>,
+\fBAdriano Botega\fP <abotega@linux.vnet.ibm.com>,
+\fBAlexandre Tanaka Hirata\fP <hirata@linux.vnet.ibm.com>,
+\fBAline Manera\fP <alinefm@br.ibm.com>,
+\fBapporc\fP <appleorchard2000@gmail.com>,
+\fBAnthony Liguori\fP <aliguori@us.ibm.com>,
+\fBBing Bu Cao\fP <mars@linux.vnet.ibm.com>,
+\fBChristy Perez\fP <christy@linux.vnet.ibm.com>,
+\fBCole Robinson\fP <crobinso@redhat.com>,
+\fBCrístian Viana\fP <vianac@linux.vnet.ibm.com>,
+\fBDaniel H Barboza\fP <danielhb@linux.vnet.ibm.com>,
+\fBEduardo Elias Ferreira\fP <edusf@linux.vnet.ibm.com>,
+\fBEli Qiao(Li Yong Qiao)\fP <taget@linux.vnet.ibm.com>,
+\fBHongliang Wang\fP <hlwang@linux.vnet.ibm.com>,
+\fBLeonardo Garcia\fP <lagarcia@br.ibm.com>,
+\fBLise Noble\fP <lwnoble@us.ibm.com>,
+\fBMalcolm Yu\fP <minghaoyusombie@gmail.com>,
+\fBMark Wu\fP <wudxw@linux.vnet.ibm.com>,
+\fBMei Na Zhou\fP <zhoumein@linux.vnet.ibm.com>,
+\fBPaulo Vital\fP <pvital@linux.vnet.ibm.com>,
+\fBPradeep K Surisetty\fP <psuriset@linux.vnet.ibm.com>,
+\fBRamon Medeiros\fP <ramonn@linux.vnet.ibm.com>,
+\fBRodrigo Trujilo\fP <rodrigo.trujillo@linux.vnet.ibm.com>,
+\fBRoyce Lv\fP <lvroyce@linux.vnet.ibm.com>,
+\fBShaoHe Feng\fP <shaohef@linux.vnet.ibm.com>,
+\fBShu Ming\fP <shuming@linux.vnet.ibm.com>,
+\fBToby Allsopp\fP <toby@MI6.GEN.NZ>,
+\fBTony Breeds\fP <tonyb@au1.ibm.com>,
+\fBXin BJ Ding\fP <xinding@cn.ibm.com>,
+\fBYu Xin Huo\fP <huoyuxin@linux.vnet.ibm.com>,
+\fBZhou Zheng Sheng\fP <zhshzhou@linux.vnet.ibm.com>,
+.SH SEE ALSO
