@@ -20,6 +20,7 @@
 docdir = $(datadir)/kimchi/doc
 
 dist_doc_DATA = \
+	apache.conf.ex \
 	API.md \
 	README.md \
 	README-federation.md \

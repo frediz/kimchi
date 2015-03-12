@@ -29,7 +29,7 @@ from string import Template
 
 from kimchi import sslcert
 from kimchi.config import paths
-
+import kimchi.config as config
 
 def _create_proxy_config(options):
     """Create nginx configuration file based on current ports config
@@ -88,6 +88,9 @@ def _create_proxy_config(options):
 
 def start_proxy(options):
     """Start nginx reverse proxy."""
+    if config.config.get("server", "run_proxy") == 'off':
+        return
+
     _create_proxy_config(options)
     nginx_config_dir = paths.nginx_conf_dir
     config_file = "%s/kimchi.conf" % nginx_config_dir
@@ -97,5 +100,8 @@ def start_proxy(options):
 
 def terminate_proxy():
     """Stop nginx process."""
+    if config.config.get("server", "run_proxy") == 'off':
+        return
+
     term_proxy_cmd = ['nginx', '-s', 'stop']
     subprocess.call(term_proxy_cmd)
