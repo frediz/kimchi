@@ -57,7 +57,7 @@ kimchi.login_main = function() {
                 var next_url = lastPage ? lastPage.replace(/\"/g,'') : "/";
             }
             kimchi.cookie.set('roles',JSON.stringify(data.roles));
-            window.location.replace(next_url)
+            window.location.replace(window.location.pathname.replace(/\/+login.html/, '') + next_url)
         }, function() {
             $("#messUserPass").show();
             $("#messSession").hide();
