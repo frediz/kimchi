@@ -6,6 +6,7 @@ Standards-Version: 3.9.6
 Build-Depends: debhelper (>= 9),
                dh-autoreconf,
                dh-systemd,
+               dh-python,
                python,
                python-cheetah,
                python-cherrypy3,
