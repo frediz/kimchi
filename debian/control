@@ -1,0 +1,75 @@
+Source: kimchi
+Section: misc
+Priority: optional
+Maintainer: Frédéric Bonnard <frediz@linux.vnet.ibm.com>
+Standards-Version: 3.9.6
+Build-Depends: debhelper (>= 9),
+               dh-autoreconf,
+               dh-systemd,
+               python,
+               python-cheetah,
+               python-cherrypy3,
+               python-ethtool,
+               python-guestfs,
+               python-ipaddr,
+               python-jsonschema,
+               python-libvirt,
+               python-libxml2,
+               python-lxml,
+               python-m2crypto,
+               python-pam,
+               python-parted,
+               python-pil,
+               python-psutil,
+               python-requests,
+               xsltproc
+Homepage: https://github.com/kimchi-project/kimchi
+
+Package: kimchi
+Architecture: any
+Depends: gettext,
+         libguestfs-tools,
+         libjs-jquery,
+         libjs-jquery-ui,
+         libjs-jquery-ui-theme-base,
+         libvirt-bin,
+         nfs-common,
+         nginx,
+         open-iscsi,
+         python-cheetah,
+         python-cherrypy3,
+         python-ethtool,
+         python-guestfs,
+         python-imaging,
+         python-ipaddr,
+         python-jsonschema,
+         python-ldap,
+         python-libvirt,
+         python-libxml2,
+         python-lxml,
+         python-m2crypto,
+         python-pam,
+         python-parted,
+         python-pil,
+         python-psutil,
+         python-requests,
+         qemu-system-arm [armel armhf],
+         qemu-system-mips [mips mipsel],
+         qemu-system-misc [s390x],
+         qemu-system-ppc [powerpc ppc64 ppc64el],
+         qemu-system-sparc [sparc],
+         qemu-system-x86 [i386 amd64],
+         sosreport,
+         sudo,
+         websockify,
+         novnc,
+         ${misc:Depends},
+         ${python:Depends}
+Suggests: firewalld
+Description: HTML5 based management tool for KVM
+ Kimchi is designed to make it as easy as possible to get started with KVM and
+ create your first guest.
+ .
+ Kimchi runs as a daemon on the hypervisor host. It manages KVM guests through
+ libvirt. The management interface is accessed over the web using a browser that
+ supports HTML5.

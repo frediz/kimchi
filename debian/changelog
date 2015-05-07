@@ -1,0 +1,6 @@
+kimchi (1.4.1-1) UNRELEASED; urgency=medium
+
+  [ Frédéric Bonnard ]
+  * Initial release (Closes: #772823)
+
+ -- Frédéric Bonnard <frediz@linux.vnet.ibm.com>  Wed, 06 May 2015 16:37:59 +0200
