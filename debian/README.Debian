@@ -1,0 +1,14 @@
+Quick start :
+- once kimchi is installed :
+- in /etc/kimchi/kimchi.conf, set :
+  run_proxy = off
+- then 
+    # cp /usr/share/doc/kimchi/examples/kimchi.virt.nginx /etc/nginx/sites-available/kimchi
+    # vi /etc/nginx/sites-available/kimchi  # to change the hostname
+  or
+    # cp /usr/share/doc/kimchi/examples/kimchi.sub.nginx /etc/nginx/sites-available/kimchi
+  and
+    # ln /etc/nginx/sites-available/kimchi /etc/nginx/sites-enabled/kimchi
+- and restart kimchi and nginx :
+    # /etc/init.d/nginx restart
+    # /etc/init.d/kimchi restart
