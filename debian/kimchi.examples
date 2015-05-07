@@ -1,1 +1,2 @@
-debian/kimchi.nginx
+debian/kimchi.virt.nginx
+debian/kimchi.sub.nginx
