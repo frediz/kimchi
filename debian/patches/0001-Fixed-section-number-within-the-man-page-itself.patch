@@ -1,0 +1,24 @@
+From 63d90cd47b049060b233f0dbe1e3caf9751595f2 Mon Sep 17 00:00:00 2001
+From: Frederic Bonnard <frediz@linux.vnet.ibm.com>
+Date: Thu, 7 May 2015 16:16:09 +0200
+Subject: [PATCH] Fixed section number within the man page itself
+
+It was originally in section 1 and name was kimchid.1
+It got moved to kimchid.8 but not changed in .TH
+---
+ docs/kimchid.8 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/docs/kimchid.8 b/docs/kimchid.8
+index 072a16c..f5fa90a 100644
+--- a/docs/kimchid.8
++++ b/docs/kimchid.8
+@@ -1,4 +1,4 @@
+-.TH KIMCHI 1 "February 05, 2015" "Version 1.4.0" "Kimchi Manual"
++.TH KIMCHI 8 "February 05, 2015" "Version 1.4.0" "Kimchi Manual"
+ .SH NAME
+ Kimchi \- HTML5 based management tool for KVM
+ .SH SYNOPSIS
+-- 
+1.9.1
+

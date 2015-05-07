@@ -1,3 +1,4 @@
 run-proxy-option
 change-pam-service-to-kimchi
 fix-relative-base-url
+0001-Fixed-section-number-within-the-man-page-itself.patch
