@@ -1,0 +1,16 @@
+Just go to just go to http://your_host/kimchi/ once installed.
+
+If you want to change the nginx configuration type :
+- use the corresponding configuration file : 
+    # cp /usr/share/doc/kimchi/examples/kimchi.virt.nginx /etc/nginx/sites-available/kimchi
+    # vi /etc/nginx/sites-available/kimchi  # to change the hostname
+  or
+    # cp /usr/share/doc/kimchi/examples/kimchi.sub.nginx /etc/nginx/sites-available/kimchi
+  Then enable the configuration :
+    # ln /etc/nginx/sites-available/kimchi /etc/nginx/sites-enabled/kimchi
+- And restart kimchi and nginx :
+    # /etc/init.d/nginx restart
+    # /etc/init.d/kimchi restart
+
+Users that can log in kimchi website should be member of libvirt group (authentication is
+based on kimchi pam service).

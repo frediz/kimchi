@@ -1,0 +1,23 @@
+#!/bin/sh
+set -e
+
+if [ "$1" = "purge" ]; then
+  rm -Rf /etc/kimchi
+  rm -f /etc/nginx/sites-available/kimchi
+  if which invoke-rc.d >/dev/null 2>&1; then
+    invoke-rc.d nginx restart
+  else
+    /etc/init.d/nginx restart
+  fi
+fi
+
+if [ "$1" = "remove" ]; then
+  rm -f /etc/nginx/sites-enabled/kimchi
+  if which invoke-rc.d >/dev/null 2>&1; then
+    invoke-rc.d nginx restart
+  else
+    /etc/init.d/nginx restart
+  fi
+fi
+
+#DEBHELPER#
