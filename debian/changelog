@@ -1,0 +1,9 @@
+kimchi (2.0.0-1) UNRELEASED; urgency=medium
+
+  [ Frédéric Bonnard ]
+  * Initial release (Closes: #772823, LP: #1408071)
+
+  [ debian ]
+  * New upstream release
+
+ -- debian <debian@vm82.bad>  Wed, 06 Jan 2016 17:31:49 +0100
